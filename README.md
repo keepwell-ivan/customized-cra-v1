@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Installation
 
-`yarn install`
-`npx husky install`
-`yarn husky add .husky/commit-msg 'yarn commitlint --edit $1'`
+1. `yarn install`
+2. `npx husky install`
+3. `yarn husky add .husky/commit-msg 'yarn commitlint --edit $1'`
+
+
