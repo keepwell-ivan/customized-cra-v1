@@ -1,38 +1,36 @@
 module.exports = {
 	env: {
-		es6: true,
-		node: true,
 		browser: true,
+		es2021: true,
+		node: true,
 	},
 	extends: [
 		'plugin:react/recommended',
+		'standard',
 		'plugin:react-hooks/recommended',
-		'plugin:prettier/recommended',
 		'plugin:jsx-a11y/recommended',
+		'prettier',
+		'plugin:prettier/recommended',
 	],
 	settings: {
 		react: {
 			version: 'detect',
-		},
-		'import/resolver': {
-			node: {
-				paths: ['src'],
-			},
 		},
 	},
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
 		},
-		ecmaVersion: 8,
+		ecmaVersion: 12,
 		sourceType: 'module',
 	},
 	plugins: ['import', 'react'],
 	rules: {
-		'react/react-in-jsx-scope': 'off',
 		'import/first': 'error',
 		'import/newline-after-import': 'error',
 		'import/no-duplicates': 'error',
+		'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+		'react/react-in-jsx-scope': 'off',
 		'jsx-a11y/anchor-is-valid': [
 			'error',
 			{
@@ -42,4 +40,12 @@ module.exports = {
 			},
 		],
 	},
+	overrides: [
+		{
+			files: ['**/*.js'],
+			rules: {
+				'react-hooks/exhaustive-deps': 'off',
+			},
+		},
+	],
 }
