@@ -1,5 +1,5 @@
 {
-	"name": "storybook",
+	"name": "custom-react-cra",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -15,7 +15,7 @@
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
-		"start": "craco start",
+		"dev": "craco start",
 		"build": "craco build",
 		"test": "craco test",
 		"eject": "react-scripts eject",

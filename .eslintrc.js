@@ -2,7 +2,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
-		node: true,
+		node: true
 	},
 	extends: [
 		'plugin:react/recommended',
@@ -10,19 +10,19 @@ module.exports = {
 		'plugin:react-hooks/recommended',
 		'plugin:jsx-a11y/recommended',
 		'prettier',
-		'plugin:prettier/recommended',
+		'plugin:prettier/recommended'
 	],
 	settings: {
 		react: {
-			version: 'detect',
-		},
+			version: 'detect'
+		}
 	},
 	parserOptions: {
 		ecmaFeatures: {
-			jsx: true,
+			jsx: true
 		},
 		ecmaVersion: 12,
-		sourceType: 'module',
+		sourceType: 'module'
 	},
 	plugins: ['import', 'react'],
 	rules: {
@@ -36,16 +36,16 @@ module.exports = {
 			{
 				components: ['Link'],
 				specialLink: ['hrefLeft', 'hrefRight'],
-				aspects: ['invalidHref', 'preferButton'],
-			},
-		],
+				aspects: ['invalidHref', 'preferButton']
+			}
+		]
 	},
 	overrides: [
 		{
 			files: ['**/*.js'],
 			rules: {
-				'react-hooks/exhaustive-deps': 'off',
-			},
-		},
-	],
+				'react-hooks/exhaustive-deps': 'off'
+			}
+		}
+	]
 }
